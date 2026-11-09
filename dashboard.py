@@ -519,7 +519,7 @@ def scan_details(scan_id):
         FROM findings
         WHERE scan_id = ?
         ORDER BY id
-    """)
+    """, (scan_id,))
 
     findings = cursor.fetchall()
 
@@ -533,7 +533,7 @@ def scan_details(scan_id):
         FROM form_inputs
         WHERE scan_id = ?
         ORDER BY form_id, id
-    """)
+    """, (scan_id,))
 
     forms = cursor.fetchall()
 
@@ -543,10 +543,8 @@ def scan_details(scan_id):
         FROM url_parameters
         WHERE scan_id = ?
         ORDER BY id
-    """)
-
+    """, (scan_id,))
     parameters = cursor.fetchall()
-
     connection.close()
 
     return render_template_string(

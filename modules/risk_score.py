@@ -28,6 +28,8 @@ MISCONFIG_WEIGHTS = {
 
 def get_severity(weight):
     if weight >= 15:
+        return "HIGH"
+    elif weight >= 10:
         return "MEDIUM"
     elif weight >= 5:
         return "LOW"

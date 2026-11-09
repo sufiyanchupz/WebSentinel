@@ -105,3 +105,24 @@ The main objectives of WebSentinel are:
                         |
                         v
                    Scan Details
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sufiyanchupz/WebSentinel.git
+cd WebSentinel
+```
+### Create and activate virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
